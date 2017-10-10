@@ -58,3 +58,19 @@ find_path(graph *g, int start , int end, int parents[])
   prinf("%d", end);
   find_path(g, start, parents[end], parents);
 }
+
+
+connected_components(graph *g)
+{
+  int mV = g->mV;
+  int c = 0;
+
+  for(int i = 0 ; i <= mV ; i++)
+    {
+      c++;
+      if (discovered[i] == false)
+        {
+          breadth_first_traversal(g, i);
+        }
+    }
+}
