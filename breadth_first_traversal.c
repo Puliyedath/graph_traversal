@@ -45,3 +45,16 @@ breadth_first_traversal(graph *g, int start)
     }
   
 }
+
+find_path(graph *g, int start , int end, int parents[])
+{
+
+  if (parents[end] == -1 || (start == end))
+    {
+      printf("%d", start)
+      return 0; 
+    }
+
+  prinf("%d", end);
+  find_path(g, start, parents[end], parents);
+}
