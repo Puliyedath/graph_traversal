@@ -60,6 +60,7 @@ find_path(graph *g, int start , int end, int parents[])
 }
 
 
+//begining of the defun and end of defun is the method of movement that you 
 connected_components(graph *g)
 {
   int mV = g->mV;
@@ -74,3 +75,6 @@ connected_components(graph *g)
         }
     }
 }
+
+
+//biparte
