@@ -3,9 +3,11 @@
 
 int main()
 {
-  int findMatch(char* p, char* t);
-  int result = findMatch("abc" ,"hareesh");
-  printf("the result is %d", result);
+int findMatch(char* p, char* t);
+int power(int a , int n );
+//int result = findMatch("abc" ,"hareesh");
+//printf("the result is %d", result);
+printf("4 to 4 is %d" ,power(4,4));
   
 }
 
@@ -32,4 +34,15 @@ int findMatch(char *p, char* t)
   return -1;
 }
 
+int power(int a,int n)
+{
+  int x;
+  if (n == 0) return 1;
+
+  x = power(a , n/2);
+  if (n % 2 == 0) return x * x;
+  return a * x * x;
+}
+    
+  
 
