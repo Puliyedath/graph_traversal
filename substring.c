@@ -5,7 +5,7 @@ int main()
 {
 int findMatch(char* p, char* t);
 int power(int a , int n );
-//int result = findMatch("abc" ,"hareesh");
+//int result = findMatch("abc" ,"hareesh");(setq gdb-many-windows t)
 //printf("the result is %d", result);
 printf("4 to 4 is %d" ,power(4,4));
   

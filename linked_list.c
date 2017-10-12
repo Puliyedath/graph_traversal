@@ -13,6 +13,7 @@ void init_linked_list(list **p);
 void print_list(list *p);
 void add_item(list **p, int val);
 int search_list(list *p, int val);
+void delete_value(list **p, int value);
 
 int main ()
 {
@@ -22,6 +23,8 @@ int main ()
   add_item(&p, 3);
   add_item(&p, 4);
   print_list(p);
+  delete_value(&p, 2);
+  print_list(p);//(setq gdb-many-windows t)
 
   printf("is 5 in the list %d \n", search_list(p, 5));
   printf("is 4 in the list %d \n", search_list(p, 4));
@@ -69,5 +72,19 @@ void init_linked_list(list **p)
   *p = q ;
 }
 
+void delete_value(list **p, int value)
+{
+  list *q ;
+  while((*p) != NULL)
+    {
+      if ((*p)->value == value)
+        {
+          q->next = (*p)->next;
+          break;
+        }
+      q = *p;
+      *p = (*p)->next;
+    }
+}
 
   
