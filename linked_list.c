@@ -75,16 +75,31 @@ void init_linked_list(list **p)
 void delete_value(list **p, int value)
 {
   list *q ;
+  list *head;
+  head = *p;
+
+  //if head is the value
+  if ((*p)->value == value)
+    {
+      free(*p);
+      *p = (*p)->next;
+      return;
+    }
+
   while((*p) != NULL)
     {
       if ((*p)->value == value)
         {
           q->next = (*p)->next;
+          free(*p);
           break;
         }
-      q = *p;
-      *p = (*p)->next;
+      q = (*p);
+      (*p) = (*p)->next;
     }
+
+  *p = head;
+  
 }
 
   
